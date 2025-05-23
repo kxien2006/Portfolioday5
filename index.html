@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Daily Projects - Khushboo Thakur</title>
+    <meta name="description" content="A master page linking to Khushboo Thakur's daily coding projects." />
+    <meta name="author" content="Khushboo Thakur" />
+    <meta property="og:title" content="My Daily Projects" />
+    <meta property="og:image" content="https://placehold.co/1200x630/4a175a/ffd700?text=Daily+Projects" />
+    <meta property="og:description" content="Explore various daily coding projects." />
+    <meta name="theme-color" content="#4a175a" />
+    <link rel="icon" href="favicon.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #2c0a38, #3a1045, #4a175a); /* Dark purple gradient */
+        color: #f5f5f5;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+      }
+
+      .container {
+        background-color: rgba(28, 16, 41, 0.9); /* Slightly transparent dark background */
+        border-radius: 1rem;
+        padding: 3rem; /* Increased padding */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        max-width: 800px; /* Increased max-width */
+        width: 100%;
+        backdrop-filter: blur(8px); /* Glassmorphism effect */
+        border: 1px solid rgba(255, 223, 0, 0.3); /* Subtle gold border */
+      }
+
+      h1 {
+        font-size: 3rem; /* Increased font size */
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #ffd700; /* Gold accent */
+        text-shadow: 0 0 10px rgba(255, 223, 0, 0.5);
+      }
+
+      .profile-photo {
+        width: 180px; /* Increased photo size */
+        height: 180px; /* Increased photo size */
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1.5rem auto; /* Center and add space below */
+        border: 3px solid #ffd700; /* Gold border */
+        box-shadow: 0 0 10px rgba(255, 223, 0, 0.5); /* Subtle glow */
+      }
+
+      .welcome-section {
+        margin-bottom: 2rem;
+        color: #e0e0e0; /* Lighter text for description */
+      }
+
+      .welcome-section p {
+        font-size: 1.1rem; /* Slightly increased font size */
+        line-height: 1.6;
+      }
+
+      .contact-details {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem; /* Adjusted margin */
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.05); /* Light background for contact */
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 223, 0, 0.1);
+      }
+
+      .contact-details p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .contact-details a {
+        color: #ffd700; /* Gold accent for links */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s ease;
+      }
+
+      .contact-details a:hover {
+        color: #ff69b4; /* Pink on hover */
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem; /* Space between social icons */
+        margin-bottom: 2rem; /* Space below social links */
+      }
+
+      .social-links a {
+        color: #f5f5f5; /* Default icon color */
+        font-size: 2rem; /* Icon size */
+        transition: color 0.2s ease, transform 0.2s ease;
+      }
+
+      .social-links a:hover {
+        color: #ffd700; /* Gold on hover */
+        transform: scale(1.1);
+      }
+
+
+      .project-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .project-buttons .btn {
+        width: 100%;
+        padding: 1.2rem 1.8rem; /* Increased padding for buttons */
+        font-size: 1.3rem; /* Increased font size for buttons */
+        font-weight: 600;
+        border-radius: 0.75rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background-color: #ff69b4; /* Pink */
+        color: white;
+        border: none;
+      }
+
+      .project-buttons .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(255, 105, 180, 0.4);
+        background-color: #ff1493; /* Darker pink */
+      }
+
+      /* Responsive adjustments */
+      @media (min-width: 640px) {
+        .project-buttons {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .project-buttons .btn {
+          width: calc(50% - 0.75rem); /* Two buttons per row with gap */
+        }
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          padding: 4rem; /* Adjusted padding for larger screens */
+        }
+        h1 {
+          font-size: 3.5rem; /* Further increased font size for larger screens */
+        }
+        .project-buttons .btn {
+          width: calc(33.33% - 1rem); /* Three buttons per row with gap */
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 900px; /* Further increased max-width */
+        }
+        .project-buttons .btn {
+          width: calc(25% - 1.125rem); /* Four buttons per row with gap */
+        }
+      }
+
+      .footer-copyright {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #a0a0a0; /* Lighter grey for copyright text */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="image.jpg" alt="Your Profile Photo" class="profile-photo" loading="lazy" />
+      <div class="welcome-section">
+        <p>Welcome to my collection of daily coding challenges and projects!</p>
+        <p>Here you'll find a showcase of my progress and learning journey.</p>
+      </div>
+      <div class="contact-details">
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:123khushboo7026@sjcem.edu.in">123khushboo7026@sjcem.edu.in</a></p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/kxien2006" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/khushboo-thakur-336857292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/_kxien_n" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="project-buttons">
+        <a href="https://kxien2006.github.io./Portfolio/"_blank" rel="noopener noreferrer" class="btn btn-primary">Day 1</a>
+        <a href="https://kxien2006.github.io/khushboo1/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Day 2</a>
+        <a href="https://kxien2006.github.io/portfolio12/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Day 3</a>
+        <a href="https://kxien2006.github.io/portfolioday4/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Day 4</a>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2025 Khushboo Thakur | All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>
